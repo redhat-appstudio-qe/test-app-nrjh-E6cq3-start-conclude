@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-component-zqkx
+  namespace: build-e2e-iarr-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:d8c560a02416db5fdb31562a44206a1826d2f1cdf2262d2dc68155fedf16641e
+        name: my-python
+        resources: {}
+status: {}
