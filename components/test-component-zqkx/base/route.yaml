@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: test-component-zqkx
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: test-component-zqkx
+    app.kubernetes.io/part-of: test-app-nrjh
+  name: test-component-zqkx
+  namespace: build-e2e-iarr-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: test-component-zqkx
+    weight: null
+status: {}
